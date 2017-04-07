@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta content="找工作,招聘网,招聘信息,互联网招聘" name="keywords">
+    <link rel="stylesheet" type="text/css" href="../static/admin.css">
+</head>
+<body>
+<div class="header">
+    <h1 class="logo">拉勾网</h1>
+    <ul class="tab">
+        <li><a href="javascript:window.location.reload();" class="selectTab">管理论坛</a></li>
+    </ul>
+    <a href="main" class="login">退出登陆</a>
+</div>
+<div class="search-container">
+    <div class="first">
+        <a href="javascript:;" class="position add">添加点评</a>
+        <a href="javascript:;" class="position del">删除点评</a>
+    </div>
+</div>
+<div class="container">
+    <div class="list">
+        <form action="add" method="POST">
+            <div class="edit">
+                <label>标题</label>
+                <input type="text" name="title">
+                <label class="label-content">内容</label>
+                <textarea name="comment"></textarea>
+                <button type="button" class="cancel">取消</button>
+                <button type="submit" class="submit">保存</button>
+            </div>
+            <ul>
+                {% for item in list %}
+                <li>
+                    <h3>{{ item.title }}</h3>
+                    <input type="checkbox" name="order" class="checkbox" value="{{ item.id }}">
+                    <p>{{ item.comment }}</p>
+                    <hr>
+                </li>
+                {% endfor %}
+            </ul>
+        </form>
+    </div>
+    <div class="list-right">
+        <div>
+            <img src="../static/bbs1.jpg" alt="">
+        </div>
+        <div>
+            <img src="../static/bbs2.jpg" alt="">
+        </div>
+        <div>
+            <img src="../static/bbs3.jpg" alt="">
+        </div>
+        <div>
+            <img src="../static/bbs4.jpg" alt="">
+        </div>
+        <div>
+            <img src="../static/bbs5.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <img src="../static/footer.png" alt="">
+    <ul>
+        <li>启航APP</li>
+        <li>启航微博</li>
+        <li>启航微信</li>
+        <li>版本更新</li>
+        <li>帮助中心</li>
+        <li>联系我们</li>
+        <li>服务热线 : 4006-2828-35 (9:00 -18:00)</li>
+    </ul>
+</div>
+<a href="javascript:;" class="backtop"></a>
+<script src="../static/jquery.js"></script>
+<script src="../static/admin.js"></script>
+</body>
+</html>

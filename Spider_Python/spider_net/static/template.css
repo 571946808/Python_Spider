@@ -1,0 +1,147 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+    color: #333;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f7f7f7;
+}
+* {
+    outline: 0;
+}
+a{
+    text-decoration: none;
+}
+.selectTab{
+    color: #00b38a !important;
+}
+
+/***标题栏***/
+.header{
+    min-width: 1024px;
+    height: 54px;
+    border-bottom: 2px solid #e5e5e5;
+    background-color: #fafafa;
+}
+.logo{
+    float: left;
+    width: 97px;
+    height: 34px;
+    margin: 10px 0 0;
+    background-image: url(logo.png);
+    overflow: hidden;
+    text-indent: -99em;
+    margin-left: 110px;
+    width: 97px;
+}
+.tab{
+    float: left;
+    list-style: none;
+    margin-left: 130px;
+    font-size: 18px;
+    line-height: 53px;
+    text-align: center;
+    vertical-align: center;
+}
+.tab li{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    top: -18px;
+}
+.tab li a{
+    text-decoration: none;
+    color: #999;
+    display: inline-block;
+    height: 54px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 2px solid #e5e5e5;
+}
+.tab li a:hover{
+    border-bottom: 2px solid #00b38a;
+    color: #000;
+}
+
+/***搜索栏***/
+.search-container{
+    background-color: #ebf0ef;
+    padding: 0 110px 40px 110px;
+}
+.first{
+    clear: both;
+}
+.first .position{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    background-color: #00b38a;
+    padding: 7px 10px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+.first .disable{
+    text-decoration: none;
+    display: inline-block;
+    color: #999;
+    padding: 7px 10px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 2px;
+}
+
+/***底部栏***/
+.list{
+    margin: 10px 50px;
+}
+.list ul{
+    list-style: none;
+}
+.list ul li{
+    display: inline-block;  
+    padding: 10px 10px 10px 10px;
+}
+
+/***底部栏***/
+.footer{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    margin-top: 10px;
+    height: 30px;
+    clear: both;
+}
+.footer img{
+    margin: 12px 20px 10px 110px;
+    float: left;
+    width: 170px;
+}
+.footer ul{
+    list-style: none;
+    float: left;
+    width: 800px;
+}
+.footer li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/***backtop栏***/
+.backtop{
+    display: inline-block;
+    width: 28px;
+    height: 64px;
+    position: fixed;
+    cursor: pointer;
+    background: url('backtop.png') left top;
+    left: 95%;
+    bottom: 20%;
+}
+a.backtop:hover{
+    background: url(backtop.png) right bottom;
+}

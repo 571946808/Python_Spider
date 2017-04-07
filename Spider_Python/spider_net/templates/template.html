@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta content="找工作,招聘网,招聘信息,互联网招聘" name="keywords">
+    <link rel="stylesheet" type="text/css" href="../static/template.css">
+    <link rel="stylesheet" type="text/css" href="../static/img.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="logo">拉勾网</h1>
+        <ul class="tab">
+            <li><a href="main">首页</a></li>
+            <li><a href="template" class="selectTab">简历模板</a></li>
+            <li><a href="bbs">论坛</a></li>
+        </ul>
+    </div>
+    <div class="search-container">
+        <div class="first">
+            <a href="javascript:;" class="position">常规模板 ( 50+ )</a>
+            <a class="disable">创意模板 ( 50+ )</a>
+        </div>
+    </div>
+    <div class="list">
+        <ul>
+            {% for item in list %}
+            <li>
+                <div class="box"> 
+                   <div class="he_border1"> 
+                        <img class="he_border1_img" src="{{ item.img }}" alt="{{ item.text }}">
+                        <div class="he_border1_caption"> 
+                            <h3 class="he_border1_caption_h">启航</h3> 
+                            <p class="he_border1_caption_p">{{ item.text }}</p>
+                            <a class="he_border1_caption_a" href="{{ item.url }}" target="_blank"></a>
+                        </div> 
+                    </div> 
+                </div> 
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="footer">
+        <img src="../static/footer.png" alt="">
+        <ul>
+            <li>启航APP</li>
+            <li>启航微博</li>
+            <li>启航微信</li>
+            <li>版本更新</li>
+            <li>帮助中心</li>
+            <li>联系我们</li>
+            <li>服务热线 : 4006-2828-35 (9:00 -18:00)</li>
+        </ul>
+    </div>
+    <a href="javascript:;" class="backtop"></a>
+    <script src="../static/jquery.js"></script>
+    <script src="../static/main.js"></script>
+</body>
+</html>
