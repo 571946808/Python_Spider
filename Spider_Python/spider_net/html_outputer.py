@@ -32,9 +32,7 @@ class HtmlOutputer(object):
             key = key.replace(' ', '')
             keywords = scseg.seg_keywords(key)
             self.sql = "SELECT DISTINCT * from "+ self.job +" where "
-            print rule
             for keyword in keywords:
-                #'select * from job where'+=
                 if rule == '1-2年':
                     if i:
                         self.sql += "((position LIKE '%"+keyword+"%' OR company LIKE '%"+keyword+"%' OR location LIKE '%"+keyword+"%') AND location LIKE '%"+location+"%' AND (rule LIKE '%1%' OR rule LIKE '%2%') AND school LIKE '%"+school+"%')"
